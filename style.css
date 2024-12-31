@@ -1,0 +1,142 @@
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin: 0;
+    background-color: #111111;
+    color: white;
+}
+
+h3{
+    color: white;
+}
+
+/* Conteneur du lecteur audio */
+.audio-player {
+    width: 350px;
+    padding: 20px;
+    background: #111111;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+audio{
+    display: none;
+}
+
+/* Bouton Upload MP3 */
+.audio-player #upload-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: linear-gradient(180deg, #3000DF 82%, #CA19DA 100%);
+    color: white;
+    border: none;
+    border-radius: 36.5px;
+    cursor: pointer;
+}
+
+/* Zone des contrôles */
+.controls {
+    margin: 15px 0;
+}
+
+.controls button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #111111;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: none;
+}
+
+/* Barre de progression */
+.progress-bar {
+    position: relative;
+    height: 10px;
+    background: #111111;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress {
+    height: 100%;
+    width: 0%; /* Par défaut */
+    background: linear-gradient(90deg, #EA03FF 29.5%, #3000DF 84%);
+    background-size: 200% 200%;
+    transition: width 0.3s ease;
+    animation: gradientAnimation 1s infinite alternate ;
+}
+
+.playlist {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.playlist ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.playlist li {
+    padding: 5px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #EA03FF 29.5%, #3000DF 84%);
+    border-bottom: 1px solid #ddd;
+}
+
+.playlist li:hover {
+    background-color: #f1f1f1;
+}
+
+.playlist li.active {
+    background: linear-gradient(90deg, #EA03FF 29.5%, #3000DF 84%);
+    background-size: 200% 200%;
+    color: white;
+    animation: gradientAnimation 1s infinite alternate ;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+span{
+    color: white;
+}
+
+.app-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 2px solid #444;
+}
+
+.app-footer a {
+    color: #1e90ff; /* Bleu clair */
+    text-decoration: none;
+}
+
+.app-footer a:hover {
+    text-decoration: underline;
+}
+
+.app-footer strong {
+    color: white; /* Couleur orange */
+}

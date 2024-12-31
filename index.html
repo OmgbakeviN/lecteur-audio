@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecteur Audio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="audio-player">
+        <!-- Bouton pour charger un fichier MP3 -->
+        <button id="upload-btn">Upload MP3</button>
+        
+        <!-- Élément audio -->
+        <audio id="audio-element" controls></audio>
+        
+        <img src="assets/music pic.svg" alt="image">
+
+        <!--temps ecoule-->
+        <div class="time-container">
+            <span id="current-time">0:00</span> / <span id="total-time">0:00</span>
+        </div>
+
+
+        <!-- Barre de progression -->
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+
+        <!-- Contrôles (Précédent, Lecture, Pause, Suivant) -->
+        <div class="controls">
+            <button id="prev-btn">
+                <img src="assets/skip_previous.svg" alt="previous" >
+            </button>
+            <button id="play-btn">
+                <img src="assets/Play circle.svg" alt="Play" />
+            </button>
+            <button id="pause-btn" style="display: none;">
+                <img src="assets/Pause circle.svg" alt="pause">
+            </button>
+            <button id="next-btn">
+                <img src="assets/skip_next.svg" alt="Next" />
+            </button>
+        </div>
+        
+
+        <!-- playlist -->
+        <div class="playlist">
+            <h3><u>Playlist</u></h3>
+            <ul id="playlist"></ul>
+        </div>
+
+        <footer class="app-footer">
+            <p>Développé par <strong>Omgba Paul Kevin</strong></p>
+            <p>Email : <a href="mailto:kevinomgba1@gmail.com">kevinomgba1@gmail.com</a></p>
+            <p>Téléphone : <a href="tel:+237620464907">+237 620 464 907</a>, <a href="tel:+237656051668">+237 656 051 668</a></p>
+        </footer>
+        
+    </div>    
+    
+    <script src="script.js"></script>
+</body>
+</html>
